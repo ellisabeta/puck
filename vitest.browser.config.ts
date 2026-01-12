@@ -12,5 +12,16 @@ export default defineConfig({
       // https://vitest.dev/config/browser/playwright
       instances: [{ browser: "chromium" }],
     },
+    setupFiles: "./vitest.setup.ts",
+  },
+  optimizeDeps: {
+    include: [
+      "vitest-browser-react",
+      "@tanstack/react-query",
+      "react-scroll-parallax",
+      "sonner",
+      "clsx",
+      "tailwind-merge",
+    ],
   },
 });
